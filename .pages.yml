@@ -1,0 +1,27 @@
+media:
+  - name: images
+    label: تصاویر
+    input: assets/images
+    output: /assets/images
+
+content:
+  - name: products
+    label: محصولات
+    type: file
+    path: products.json
+    fields:
+      - name: title
+        label: نام محصول
+        type: string
+      - name: wood
+        label: جنس چوب
+        type: string
+      - name: description
+        label: توضیحات
+        type: text
+      - name: price
+        label: قیمت
+        type: string
+      - name: image
+        label: تصویر محصول
+        type: image
