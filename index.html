@@ -19,7 +19,9 @@ button{font:inherit;color:inherit}
 /* header */
 header{position:sticky;top:0;z-index:10;background:rgba(241,232,216,.94);border-bottom:1.5px solid var(--char)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-.logo{font:700 26px Georgia,"Times New Roman",serif;letter-spacing:7px;direction:ltr;color:var(--teal)}
+.logo{display:flex;align-items:center;flex:0 0 auto}
+/* فایل لوگو دور تا دورش حاشیه شفاف دارد؛ مارجین منفی فقط همان حاشیه شفاف را از چیدمان هدر کم می‌کند و به خود لوگو دست نمی‌زند */
+.logo img{--lh:92px;display:block;height:var(--lh);width:auto;max-width:none;margin-top:calc(var(--lh)*-.239);margin-bottom:calc(var(--lh)*-.281);margin-left:calc(var(--lh)*-.139);margin-right:calc(var(--lh)*-.105)}
 .navlinks{display:flex;gap:20px;font-size:14px}
 .navlinks a{padding:2px 0;border-bottom:2px solid transparent}
 .navlinks a:hover{border-color:var(--rust)}
@@ -80,6 +82,7 @@ footer{background:var(--char);color:var(--cream);border-top:1px solid #4a4e4c;fo
 .frow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media(max-width:760px){
+ .logo img{--lh:76px}
  .hero{grid-template-columns:1fr;padding:32px 0 28px;gap:24px}
  .rings{order:-1;width:min(70%,260px)}
  .navlinks{gap:12px;font-size:12.5px}
@@ -93,7 +96,7 @@ footer{background:var(--char);color:var(--cream);border-top:1px solid #4a4e4c;fo
 <body>
 <header>
  <div class="wrap nav">
-  <a class="logo" href="#top" aria-label="CHO">CHO</a>
+  <a class="logo" href="#top" aria-label="چو"><img src="assets/images/BackgroundEraser_20260809_162045575.png" width="1920" height="2501" alt="لوگوی چو"></a>
   <nav class="navlinks" aria-label="منو">
    <a href="#products">محصولات</a>
    <a href="#about">درباره چو</a>
