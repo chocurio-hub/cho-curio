@@ -1,7 +1,12 @@
 {
-  "title": "چوب سیگار",
-  "wood": "گردو",
-  "description": "چوب گردوی سیاه ایرانی\nچوب چندین سال خشک شده\n",
-  "price": "559000",
-  "image": "/assets/images/1000078142.jpg"
+  "products": [
+    {
+      "title": "چوب سیگار",
+      "category": "چوب سیگار",
+      "wood": "گردو",
+      "description": "چوب گردوی سیاه ایرانی\nچوب چندین سال خشک شده",
+      "price": "559000",
+      "image": "assets/images/1000078142.jpg"
+    }
+  ]
 }
