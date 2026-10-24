@@ -1,12 +1,43 @@
-{
-  "products": [
-    {
-      "title": "چوب سیگار",
-      "category": "چوب سیگار",
-      "wood": "گردو",
-      "description": "چوب گردوی سیاه ایرانی\nچوب چندین سال خشک شده",
-      "price": "559000",
-      "image": "assets/images/1000078142.jpg"
-    }
-  ]
-}
+media:
+  - name: images
+    label: تصاویر
+    input: assets/images
+    output: assets/images
+
+content:
+  - name: products
+    label: محصولات
+    type: file
+    path: products.json
+    fields:
+      - name: products
+        label: لیست محصولات
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: نام محصول
+            type: string
+          - name: category
+            label: دسته‌بندی
+            type: select
+            options:
+              values:
+                - چوب سیگار
+                - باکس
+                - کانزاشی
+                - سوت
+                - جوز
+                - شیکر
+          - name: wood
+            label: جنس چوب
+            type: string
+          - name: description
+            label: توضیحات
+            type: text
+          - name: price
+            label: قیمت
+            type: string
+          - name: image
+            label: تصویر محصول
+            type: image
