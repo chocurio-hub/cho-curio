@@ -3,92 +3,93 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#F1E8D8">
+<meta name="theme-color" content="#285B62">
 <meta name="description" content="CHO؛ دست‌سازه‌های چوبی: چوب سیگار، باکس، کانزاشی، سوت، جوز و شیکر.">
 <title>CHO | دست‌سازه‌های چوبی</title>
 <style>
-:root{--cream:#F1E8D8;--cream2:#E8DCC4;--teal:#285B62;--rust:#D47A4E;--char:#292C2B;--muted:#5d625f}
+/* فقط چهار رنگ برند: سبزآبی نفتی، کرم، نارنجی سوخته، ذغالی */
+:root{--teal:#285B62;--cream:#F1E8D8;--rust:#D47A4E;--char:#292C2B}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--char);font-family:"Vazirmatn","Vazir","IRANSans",Tahoma,"Segoe UI",Arial,sans-serif;line-height:1.9;font-size:16px}
+body{margin:0;background:var(--teal);color:var(--cream);font-family:"Vazirmatn","Vazir","IRANSans",Tahoma,"Segoe UI",Arial,sans-serif;line-height:1.9;font-size:16px}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+:focus-visible{outline:3px solid var(--cream);outline-offset:2px;box-shadow:0 0 0 6px var(--char)}
 .wrap{width:min(1100px,92%);margin:0 auto}
 
 /* header */
-header{position:sticky;top:0;z-index:10;background:rgba(241,232,216,.94);border-bottom:1.5px solid var(--char)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+header{--hbg:var(--cream);--hfg:var(--char);position:sticky;top:0;z-index:10;background:var(--hbg);color:var(--hfg);border-bottom:2px solid var(--rust)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
 .logo{display:flex;align-items:center;flex:0 0 auto}
 /* فایل لوگو دور تا دورش حاشیه شفاف دارد؛ مارجین منفی فقط همان حاشیه شفاف را از چیدمان هدر کم می‌کند و به خود لوگو دست نمی‌زند */
-.logo img{--lh:92px;display:block;height:var(--lh);width:auto;max-width:none;margin-top:calc(var(--lh)*-.239);margin-bottom:calc(var(--lh)*-.281);margin-left:calc(var(--lh)*-.139);margin-right:calc(var(--lh)*-.105)}
-.navlinks{display:flex;gap:20px;font-size:14px}
+.logo img{--lh:134px;display:block;height:var(--lh);width:auto;max-width:none;margin-top:calc(var(--lh)*-.239);margin-bottom:calc(var(--lh)*-.281);margin-left:calc(var(--lh)*-.139);margin-right:calc(var(--lh)*-.105)}
+.navlinks{display:flex;gap:22px;font-size:14px}
 .navlinks a{padding:2px 0;border-bottom:2px solid transparent}
 .navlinks a:hover{border-color:var(--rust)}
 
 /* buttons: leaf shape */
-.btn{display:inline-block;padding:9px 22px;border:1.5px solid var(--char);border-radius:22px 4px 22px 4px;font-size:14px;background:transparent;transition:background .2s,color .2s,border-radius .2s}
-.btn:hover{border-radius:4px 22px 4px 22px}
+.btn{display:inline-block;padding:9px 22px;border:1.5px solid var(--cream);color:var(--cream);border-radius:22px 4px 22px 4px;font-size:14px;background:transparent;transition:background .2s,color .2s,border-radius .2s}
+.btn:hover{border-radius:4px 22px 4px 22px;background:var(--cream);color:var(--char)}
 .btn.primary{background:var(--rust);border-color:var(--rust);color:var(--char);font-weight:700}
-.btn.light{border-color:var(--cream);color:var(--cream)}
+.btn.primary:hover{background:var(--cream);border-color:var(--cream)}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding:56px 0 44px}
-.hero h1{font-size:clamp(32px,6vw,58px);line-height:1.5;margin:0 0 16px;font-weight:700;color:var(--teal)}
-.hero p{max-width:520px;margin:0 0 24px;color:var(--muted)}
-.rings{aspect-ratio:1;width:min(100%,380px);margin:0 auto;border-radius:58% 42% 55% 45%/47% 56% 44% 53%;background:repeating-radial-gradient(circle at 46% 52%,var(--cream) 0 7px,var(--rust) 7px 9px,var(--cream) 9px 17px,var(--teal) 17px 19px);border:2px solid var(--char);position:relative;overflow:hidden}
-.rings::after{content:"CHO";position:absolute;inset:auto 0 12% 0;text-align:center;font:700 34px Georgia,serif;letter-spacing:10px;direction:ltr;color:var(--char);background:var(--cream);width:max-content;margin:auto;padding:0 12px;left:0;right:0}
+.hero{padding:68px 0 44px}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.5;margin:0 0 16px;font-weight:700;color:var(--cream)}
+.hero p{max-width:540px;margin:0 0 26px}
 
 /* sections */
 .section{padding:40px 0}
-.section h2{font-size:26px;margin:0 0 4px;color:var(--teal)}
-.section-head p{margin:0 0 18px;color:var(--muted);font-size:14px}
+.section h2{font-size:26px;margin:0 0 4px;color:var(--cream)}
+.section-head p{margin:0 0 18px;font-size:14px}
 
 /* filters: alternating leaf / tab shapes */
-.filters{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 14px;margin-bottom:8px;scrollbar-width:thin}
-.chip{flex:0 0 auto;cursor:pointer;padding:6px 20px;border:1.5px solid var(--char);background:transparent;border-radius:20px 4px 20px 4px;font-size:14px;transition:background .2s,color .2s,border-radius .2s}
+.filters{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 14px;margin-bottom:8px;scrollbar-width:thin;scrollbar-color:var(--cream) var(--teal)}
+.chip{flex:0 0 auto;cursor:pointer;padding:6px 20px;border:1.5px solid var(--cream);color:var(--cream);background:transparent;border-radius:20px 4px 20px 4px;font-size:14px;transition:background .2s,color .2s,border-radius .2s}
 .chip:nth-child(even){border-radius:4px 20px 4px 20px}
-.chip:hover{border-color:var(--rust)}
-.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--cream);border-radius:4px 20px 4px 20px}
+.chip:hover{background:var(--rust);border-color:var(--rust);color:var(--char)}
+.chip[aria-pressed="true"]{background:var(--cream);border-color:var(--cream);color:var(--char);border-radius:4px 20px 4px 20px}
 .chip:nth-child(even)[aria-pressed="true"]{border-radius:20px 4px 20px 4px}
-.count{font-size:13px;color:var(--muted);margin:0 0 14px;min-height:1.9em}
+.chip[aria-pressed="true"]::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--rust);margin-inline-end:8px}
+.count{font-size:13px;margin:0 0 14px;min-height:1.9em}
 
 /* product cards: arch window */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
-.card{display:flex;flex-direction:column;background:var(--cream2);border:1.5px solid var(--char);border-radius:130px 130px 10px 10px;overflow:hidden}
-.photo{aspect-ratio:4/4.6;background:var(--teal);position:relative;overflow:hidden}
+.card{display:flex;flex-direction:column;background:var(--cream);color:var(--char);border:1.5px solid var(--char);border-radius:130px 130px 10px 10px;overflow:hidden}
+.photo{aspect-ratio:4/4.6;background:var(--cream);border-bottom:1.5px solid var(--char);position:relative;overflow:hidden}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-radial-gradient(circle at 50% 55%,var(--teal) 0 10px,#2f6a72 10px 12px);color:var(--cream);font:700 30px Georgia,serif;letter-spacing:8px;direction:ltr}
+.ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.ph img{width:auto;height:84%;max-width:100%;object-fit:contain}
 .info{padding:14px 16px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
 .wood{font-size:12px;color:var(--teal);font-weight:700}
 .wood::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--rust);margin-inline-end:6px}
 .card h3{margin:0;font-size:18px;line-height:1.6}
-.card p{margin:0;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.price{margin-top:auto;padding-top:8px;font-weight:700;color:var(--rust);font-size:15px}
+.card p{margin:0;font-size:13px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.price{margin-top:auto;padding-top:8px;font-weight:700;font-size:16px}
 .order{font-size:13px;font-weight:700;text-decoration:underline;text-decoration-color:var(--rust);text-underline-offset:5px;text-decoration-thickness:2px;padding-top:4px}
-.empty{grid-column:1/-1;padding:28px;border:1.5px dashed var(--char);border-radius:22px 4px 22px 4px;color:var(--muted);text-align:center}
+.empty{grid-column:1/-1;padding:28px;border:1.5px dashed var(--cream);border-radius:22px 4px 22px 4px;text-align:center}
 
-/* about + contact bands */
-.band{background:var(--teal);color:var(--cream);margin-top:24px}
+/* about (light) + contact (dark) bands */
+.band{background:var(--cream);color:var(--char);margin-top:24px}
 .band .section{padding:44px 0}
-.band h2{color:var(--cream)}
-.band p{max-width:640px;margin:8px 0 0;opacity:.92}
+.band h2{color:var(--teal)}
+.band h2::after{content:"";display:block;width:44px;height:3px;background:var(--rust);margin-top:6px}
+.band p{max-width:640px;margin:10px 0 0}
 .contact{background:var(--char);color:var(--cream)}
 .contact .in{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:44px 0}
 .contact h2{margin:0 0 6px;font-size:24px;color:var(--cream)}
-.contact p{margin:0;max-width:560px;opacity:.85}
-footer{background:var(--char);color:var(--cream);border-top:1px solid #4a4e4c;font-size:12px;padding:16px 0;opacity:.95}
+.contact p{margin:0;max-width:560px}
+footer{background:var(--char);color:var(--cream);border-top:1.5px solid var(--teal);font-size:12px;padding:16px 0}
 .frow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media(max-width:760px){
- .logo img{--lh:76px}
- .hero{grid-template-columns:1fr;padding:32px 0 28px;gap:24px}
- .rings{order:-1;width:min(70%,260px)}
+ .logo img{--lh:104px}
+ .hero{padding:40px 0 28px}
  .navlinks{gap:12px;font-size:12.5px}
  .contact .in{grid-template-columns:1fr}
 }
-@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}.card{border-radius:90px 90px 8px 8px}.card h3{font-size:15px}.info{padding:10px 10px 14px}.ph{font-size:20px;letter-spacing:5px}}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}.card{border-radius:90px 90px 8px 8px}.card h3{font-size:15px}.info{padding:10px 10px 14px}}
 @media(max-width:340px){.grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -108,15 +109,12 @@ footer{background:var(--char);color:var(--cream);border-top:1px solid #4a4e4c;fo
 <main id="top">
  <div class="wrap">
   <section class="hero">
-   <div>
-    <h1>چوب، با نگاهی<br>متفاوت و شخصی.</h1>
-    <p>دست‌سازه‌های چوبی CHO؛ هر قطعه با توجه به جنس چوب، فرم و جزئیات ساخته می‌شود. برای دیدن محصولات و ثبت سفارش، پیام بدهید.</p>
-    <div class="actions">
-     <a class="btn primary" href="https://instagram.com/cho.curio" target="_blank" rel="noopener">دیدن اینستاگرام</a>
-     <a class="btn" href="#products">مشاهده محصولات</a>
-    </div>
+   <h1>چوب، با نگاهی<br>متفاوت و شخصی.</h1>
+   <p>دست‌سازه‌های چوبی CHO؛ هر قطعه با توجه به جنس چوب، فرم و جزئیات ساخته می‌شود. برای دیدن محصولات و ثبت سفارش، پیام بدهید.</p>
+   <div class="actions">
+    <a class="btn primary" href="https://instagram.com/cho.curio" target="_blank" rel="noopener">دیدن اینستاگرام</a>
+    <a class="btn" href="#products">مشاهده محصولات</a>
    </div>
-   <div class="rings" role="img" aria-label="مقطع تنه درخت با حلقه‌های سالانه"></div>
   </section>
 
   <section class="section" id="products">
@@ -146,7 +144,7 @@ footer{background:var(--char);color:var(--cream);border-top:1px solid #4a4e4c;fo
    </div>
    <div class="actions">
     <a class="btn primary" href="https://instagram.com/cho.curio" target="_blank" rel="noopener">Instagram</a>
-    <a class="btn light" href="https://instagram.com/cho.curio" target="_blank" rel="noopener">پیام برای سفارش</a>
+    <a class="btn" href="https://instagram.com/cho.curio" target="_blank" rel="noopener">پیام برای سفارش</a>
    </div>
   </div>
  </div>
@@ -162,6 +160,7 @@ footer{background:var(--char);color:var(--cream);border-top:1px solid #4a4e4c;fo
 <script>
 (function(){
   var IG = 'https://instagram.com/cho.curio';
+  var LOGO = 'assets/images/BackgroundEraser_20260809_162045575.png';
   var CATS = ['چوب سیگار','باکس','کانزاشی','سوت','جوز','شیکر'];
   var grid = document.getElementById('grid');
   var filtersEl = document.getElementById('filters');
@@ -207,7 +206,14 @@ footer{background:var(--char);color:var(--cream);border-top:1px solid #4a4e4c;fo
     return e;
   }
 
-  function placeholder(){ return el('div','ph','CHO'); }
+  // وقتی عکس محصول نیست، لوگوی فارسی چو (همان فایل اصلی) نشان داده می‌شود
+  function placeholder(){
+    var d = el('div','ph');
+    var i = document.createElement('img');
+    i.src = LOGO; i.alt = '';
+    d.appendChild(i);
+    return d;
+  }
 
   function card(p){
     var a = el('article','card');
